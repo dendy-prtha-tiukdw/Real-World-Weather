@@ -11,7 +11,7 @@ public class WeatherData : MonoBehaviour {
 	public string API_key;
 	private float latitude;
 	private float longitude;
-	private string city;
+	public string city;
 	private bool locationInitialized;
 	public Text currentWeatherText;
 	public GetLocation getLocation;
@@ -19,7 +19,7 @@ public class WeatherData : MonoBehaviour {
 	public void Begin() {
 		latitude = getLocation.latitude;
 		longitude = getLocation.longitude;
-		city = getLocation.city;
+		//city = getLocation.city;
 		locationInitialized = true;
 	}
 	void Update() {

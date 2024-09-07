@@ -16,20 +16,26 @@ public class StateManager : MonoBehaviour {
 	void Update () {
         currentWeatherCode = weatherData.Info.current.condition.code;
 
-        /*if (currentWeather == "rain") {
-			SpawnRain ();
-		} else if (currentWeather == "snow" || currentWeather == "sleet") {
-			SpawnSnow ();
-		} else if (currentWeather == "cloudy" || currentWeather == "Patchy rain nearby" || currentWeather == "partly-cloudy-night" || currentWeather == "fog") {
-			SpawnCloudy ();
-		} else if (currentWeather == "clear-day" || currentWeather == "clear-night" || currentWeather == "wind") {
-			SpawnSunny ();
-		} else {
-			None ();
-		}*/
-        if (currentWeatherCode == 1063)
+        /*https://www.weatherapi.com/docs/weather_conditions.json*/
+        if (currentWeatherCode >= 1180 && currentWeatherCode <= 1201 || currentWeatherCode == 1240 || currentWeatherCode == 1243 || currentWeatherCode == 1246)
         {
             SpawnRain();
+        }
+        else if (currentWeatherCode >= 1210 && currentWeatherCode <= 1225)
+        {
+            SpawnSnow();
+        }
+        else if (currentWeatherCode >= 1003 && currentWeatherCode <= 1006)
+        {
+            SpawnCloudy();
+        }
+        else if (currentWeatherCode == 1000)
+        {
+            SpawnSunny();
+        }
+        else
+        {
+            None();
         }
     }
 
