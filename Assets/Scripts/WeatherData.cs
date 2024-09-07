@@ -19,8 +19,11 @@ public class WeatherData : MonoBehaviour {
 	public void Begin() {
 		latitude = getLocation.latitude;
 		longitude = getLocation.longitude;
-		//city = getLocation.city;
-		locationInitialized = true;
+		if (string.IsNullOrEmpty(city))
+		{
+            city = getLocation.city;
+        }
+        locationInitialized = true;
 	}
 	void Update() {
 		if (locationInitialized) {

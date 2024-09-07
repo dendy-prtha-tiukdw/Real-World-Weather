@@ -1015,7 +1015,7 @@ MonoBehaviour:
         code: 0
     cloud: 0
   API_key: eb75ab4eb5bf482fb9b154507240609
-  city: reykjavik
+  city: 
   currentWeatherText: {fileID: 1629389841}
   getLocation: {fileID: 519420033}
 --- !u!20 &519420031
@@ -7156,7 +7156,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &1323749516
 ParticleSystemRenderer:
   serializedVersion: 6
